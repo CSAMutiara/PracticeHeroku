@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <% include partials/head %>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+    </head>
+    <body class="container">
+        <header>
+                <% include partials/header %>
+        </header>
+        <main>
+            <br>
+            <div id="link-table">
+                <h5>Saved Links:</h5>
+                <p>
+                    <ul>
+                    <% for(var i=0; i <data.length; i++){ %>
+                        <li>
+                            <a target="_blank" href="<%=data[i].code%>"><%=data[i].name%></a>
+                        </li>
+                    <% } %>
+                    </ul>
+                </p>
+            </div>
+        </main>
+        <footer>
+            <% include partials/footer %>
+        </footer>
+    </body>
+</html>

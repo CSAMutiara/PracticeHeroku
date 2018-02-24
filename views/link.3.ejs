@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include partials/head %>
+    <link rel='stylesheet' href='/stylesheets/style.css' type="text/css"/>
+  </head>
+  <body class="container">
+    <header>
+      <% include partials/header %>
+    </header>
+    <main>
+      <h1>My Link Library</h1>
+            <div class="container">
+                <div id="link-table">
+                    <h5>Link Submission Form:</h5>
+                    <form method="POST" action='/link'>
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Give the new link a name..." required/>
+                            <input type="text" name="item" placeholder="Paste url here..." required/>
+                            <br>
+                            <button type="submit">Add Link</button>
+                        </div>
+                    </form>
+                </div>
+                <br>
+                <div id="link-table">
+                    <h5>Saved Links:</h5>
+                    <ul>
+                        <% for(var i=0; i <links.length; i++){ %>
+                            <li>
+                                <a target="_blank" href="<%=links[i].item%>"><%=links[i].name%></a>
+                            </li>
+                        <% } %>
+                    </ul>
+                </div>
+            </div>
+    </main>
+    <footer>
+      <% include partials/footer %>
+    </footer>
+  </body>
+</html>

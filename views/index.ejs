@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include partials/head %>
+    <link rel='stylesheet' href='/stylesheets/style.css' type="text/css"/>
+  </head>
+  <body class="container">
+    <header>
+      <% include partials/header %>
+    </header>
+    <main>
+      <p></p>
+      <div class="jumbotron">
+        <div class="row justify-content-md-center">
+          <h1>Link Submission Form:</h1>
+          <br>
+        </div>
+        <div class="justify-content-md-center">
+          <form>
+            <div class="container">
+              <div class="row justify-content-md-center">
+                <div class="col col-lg-11">
+                  <input type="text" class="form-control" name="item" placeholder="Paste url here..." required/>
+                </div>
+              </div>
+              <br>
+              <div class="row justify-content-md-center">
+                <div class="col-3"></div>
+                <div class="col-3">
+                  <input type="text" class="form-control" name="name" placeholder="Give it a name..." required/>
+                </div>
+                <div class="col-1">
+                  <button type="submit" class="btn btn-light">Add Link</button>
+                </div>
+                <div class="col-4"></div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <% include partials/footer %>
+    </footer>
+  </body>
+</html>
